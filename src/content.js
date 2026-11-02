@@ -1,5 +1,6 @@
+import { cover } from './cover.js';
 // Conteúdo editorial: substitua os placeholders pelos textos aprovados do autor.
-export const book = {title:'ISOLADOS', author:'Vinícius Coradi Maddaloni', cover:'/images/capa-isolados.jpg', symbol:'/images/simbolo-isolados.png'};
+export const book = {title:'ISOLADOS', author:'Vinícius Coradi Maddaloni', cover, symbol:'/images/simbolo-isolados.png'};
 export const welcome = {
  title: 'Obrigado por estar aqui.',
  message: 'Obrigado por se interessar por ISOLADOS. Este é um projeto muito importante para mim, e fico feliz em compartilhar este espaço com você.',
