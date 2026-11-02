@@ -38,3 +38,7 @@ footer .footer-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;f
 .welcome-reopen{background:none;border:0;padding:8px 0;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:4px;font:inherit}
 .welcome-reopen:hover{color:#dfb9ef}
 @media(max-width:420px){.welcome-dialog{padding:40px 21px 23px;width:calc(100% - 24px);max-height:calc(100dvh - 24px)}.welcome-dialog h2{font-size:28px}.welcome-dialog>p{font-size:16px}.welcome-email{font-size:16px}.welcome-rights p{font-size:13px}.welcome-close-form{right:6px;top:4px}}
+.chapter-text{white-space:pre-wrap;overflow-wrap:anywhere;font:18px/1.95 Georgia,'Times New Roman',serif;margin:32px 0 48px;tab-size:4}
+.chapter-reading>h2{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.35}
+.chapter-reading .chapter-nav{flex-wrap:wrap;line-height:1.6}
+@media(max-width:420px){.chapter-text{font-size:17px;line-height:1.85}}
