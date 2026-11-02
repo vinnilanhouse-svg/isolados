@@ -11,6 +11,7 @@ Importe este repositório. A configuração `vercel.json` define `npm run build`
 Os anexos da conversa não foram disponibilizados como arquivos neste ambiente. Adicione os originais aprovados, sem modificá-los:
 - `public/images/`: envie a capa panorâmica completa em JPG, PNG ou WebP, com qualquer nome. Se houver várias imagens, identifique a capa como `capa-isolados.jpg`, `capa-isolados.png` ou `capa-isolados.webp`.
 - `public/images/simbolo-isolados.png`: símbolo branco original.
+- `public/images/logo.png` ou `public/images/favicon.png`: logo para o ícone da aba. Ele é selecionado separadamente da capa e preservado sem edição.
 
 O envio pode ser feito pelo GitHub, sem editar código: https://github.com/vinnilanhouse-svg/isolados/upload/main/public/images. Há uma página de orientação em `/enviar-capa.html`. O build também reconhece uma única imagem enviada na raiz do repositório. Depois de salvar o arquivo na main, a Vercel atualiza o site automaticamente. Para conferir a seleção localmente, rode `npm run build` e `npm run preview`. A seleção é gravada somente em dist/src/cover.js; o arquivo original permanece intacto.
 
