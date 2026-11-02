@@ -1,0 +1,80 @@
+{
+  "source": "Isolados V2.pdf",
+  "pdfSha256": "41fd8ec702f0a461e1107cd82ecb52d25338f2377dfcc6eb463684a759180468",
+  "lastPublishedChapter": 9,
+  "verification": "Texto e títulos comparados integralmente entre a estrutura marcada do PDF e pdftotext; somente espaços e quebras de linha são adaptados para leitura responsiva.",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Cap 1 - A queda",
+      "firstPdfPage": 1,
+      "lastPdfPage": 6,
+      "words": 1588,
+      "textSha256": "9adaa3fd3b4ef83a354a6fad3d42341401bd8b02f6556434c7f93812c3332519"
+    },
+    {
+      "number": 2,
+      "title": "Cap 2 - Uma nova vida",
+      "firstPdfPage": 6,
+      "lastPdfPage": 16,
+      "words": 3008,
+      "textSha256": "1cb616742344ff2da36e0f05882d8257c7ba8917c9b7a48e8aea2884a608cfe9"
+    },
+    {
+      "number": 3,
+      "title": "CAP 3 - A primeira missão",
+      "firstPdfPage": 16,
+      "lastPdfPage": 27,
+      "words": 2939,
+      "textSha256": "ca098fefbc530e36f7c93450004002cf60b01158ba719c30c2382f557e910e2f"
+    },
+    {
+      "number": 4,
+      "title": "CAP 4 - Verdades",
+      "firstPdfPage": 27,
+      "lastPdfPage": 33,
+      "words": 1751,
+      "textSha256": "154e34f2eae471aea2b8682463710631f7b1a84271044b09b218adbd57615612"
+    },
+    {
+      "number": 5,
+      "title": "CAP 5 - Lembranças",
+      "firstPdfPage": 33,
+      "lastPdfPage": 41,
+      "words": 2224,
+      "textSha256": "4c7ba0821351d867da4ce4e782d36e1fa8991a8020dfd98b7b1292793c60fc8f"
+    },
+    {
+      "number": 6,
+      "title": "CAP 6 - Techno Maga",
+      "firstPdfPage": 41,
+      "lastPdfPage": 48,
+      "words": 1497,
+      "textSha256": "167cd4e3b113a24411e3532bfc41286bba0fe2b67d2ce59ae4d7fe72601c4227"
+    },
+    {
+      "number": 7,
+      "title": "CAP 7 - O Avalanche e o The Beast",
+      "firstPdfPage": 48,
+      "lastPdfPage": 52,
+      "words": 1031,
+      "textSha256": "671e40c5efe00fd3aece052341103d3c8668c0081678d0bd9583bfb75b8cecec"
+    },
+    {
+      "number": 8,
+      "title": "CAP 8 - O Nome",
+      "firstPdfPage": 52,
+      "lastPdfPage": 61,
+      "words": 1886,
+      "textSha256": "be00e95c69e0402eec80a1aea2d284c098089bb3452d10a2e142260928e4fbe9"
+    },
+    {
+      "number": 9,
+      "title": "CAP 9 - Casa",
+      "firstPdfPage": 61,
+      "lastPdfPage": 69,
+      "words": 1677,
+      "textSha256": "063a6940a9f3ec499919c57a8a691053d92e49384a76e43e89d88fdd1109477d"
+    }
+  ]
+}

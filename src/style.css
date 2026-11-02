@@ -42,3 +42,9 @@ footer .footer-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;f
 .chapter-reading>h2{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.35}
 .chapter-reading .chapter-nav{flex-wrap:wrap;line-height:1.6}
 @media(max-width:420px){.chapter-text{font-size:17px;line-height:1.85}}
+.post-copy>p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.synopsis-link{display:inline-block;color:var(--purple);font-size:15px;line-height:1.6;text-decoration:underline;text-underline-offset:4px;margin:14px 0 0;position:relative;z-index:1}
+.synopsis-reading>p{font:18px/1.95 Georgia,'Times New Roman',serif;margin:0 0 24px}
+.synopsis-reading .synopsis-divider{text-align:center;color:var(--purple);font-size:22px}
+.synopsis-reading .read-link{display:inline-block;margin-top:15px}
+@media(max-width:420px){.brand{gap:8px}.brand>span{font-size:clamp(48px,15vw,64px)}.brand .mark{width:20px;height:36px}}

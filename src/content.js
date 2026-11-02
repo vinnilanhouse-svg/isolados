@@ -1,7 +1,14 @@
 import { cover } from './cover.js';
-export { chapters } from './chapters.js';
+import { chapters } from './chapters.js';
+export { chapters };
 // Conteúdo editorial: substitua os placeholders pelos textos aprovados do autor.
 export const book = {title:'ISOLADOS', author:'Vinícius Coradi Maddaloni', cover, symbol:'/images/simbolo-isolados.png'};
+export const synopsis = [
+ 'Imagine um mundo idêntico a este em que você vive, só que com algumas diferenças. Um átomo de carbono, no início de tudo, decidiu que iria um pouco para a esquerda, e isso possibilitou uma grande mudança no DNA de várias espécies. Essa mudança criou seres mais fortes, mais rápidos, mais inteligentes, e esses foram nomeados "SUPERS".',
+ 'O super mais poderoso e famoso de todos os tempos é o Midnight Warrior, um herói com o poder de destruir montanhas com seu soco sombrio.',
+ '+',
+ 'Ainda bem que essa história não é sobre esse cara. Na verdade, é a história de um garoto que não tem controle sobre seus poderes. Você deve estar pensando que o Midnight Warrior é o ídolo desse garoto, mas não, nosso protagonista tem um ódio profundo por esse cara e pelos outros heróis. Podemos até dizer que nosso garoto é um vilão, pelo menos era, até agora.'
+];
 export const welcome = {
  title: 'Obrigado por estar aqui.',
  message: 'Obrigado por se interessar por ISOLADOS. Este é um projeto muito importante para mim, e fico feliz em compartilhar este espaço com você.',
@@ -13,7 +20,7 @@ export const welcome = {
 };
 export const characters = ['Vinicius','Miguel','Fernanda','Amanda','Jennyfer','Allan','Gabriel','Henrique','Jorge'].map(name=>({name, codename:'Codinome a inserir', description:'Descrição do personagem a inserir.', image:null}));
 export const posts = [
- {id:'primeiro-capitulo', category:'Capítulos', title:'Capítulo 01 — Título a inserir', excerpt:'O espaço onde a história começa. O texto do primeiro capítulo será inserido aqui pelo autor.', type:'chapter', label:'Texto a inserir', href:'#/capitulos/1'},
+ ...chapters.filter(chapter=>chapter.number>=1&&chapter.number<=9).map(chapter=>({id:`capitulo-${chapter.number}`, category:'Capítulos', title:chapter.title, excerpt:chapter.text?.split('\n\n')[0]||'Texto a inserir pelo autor.', label:'Texto original do autor', href:`#/capitulos/${chapter.number}`})),
  {id:'universo', category:'Universo',title:'Universo — Artigo a inserir',excerpt:'Espaço reservado aos textos sobre espécies, poderes, lugares e organizações. O conteúdo será fornecido pelo autor.',label:'Conteúdo a inserir',href:'#/universo'},
  {id:'bastidores',category:'Bastidores',title:'Entre anotações e páginas',excerpt:'Um lugar para os registros do processo de escrita, as artes e o desenvolvimento do livro.',type:'notes',label:'Conteúdo a inserir',href:'#/bastidores/processo'}
 ];
