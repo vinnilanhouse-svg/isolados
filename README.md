@@ -18,7 +18,7 @@ O envio pode ser feito pelo GitHub, sem editar código: https://github.com/vinni
 A capa é exibida na proporção original, inclusive no celular. As imagens mantêm suas proporções originais, inclusive no celular.
 
 ## Conteúdo
-Edite `src/content.js`: livro, capítulos, publicações e nove personagens. Todos os textos canônicos ausentes estão identificados como placeholders. As publicações não usam imagens. O visual segue a referência de caderno: papel marfim, perfurações, recortes lilás, cabeçalho preto e anotações manuscritas. As fontes Barlow Condensed e Caveat são servidas localmente, com licenças em public/fonts.
+Edite `src/content.js`: livro, capítulos, publicações e nove personagens. Todos os textos canônicos ausentes estão identificados como placeholders. As publicações não usam imagens. O visual segue a referência de caderno: papel marfim, perfurações, recortes lilás, cabeçalho preto e anotações manuscritas. As fontes Bebas Neue, Barlow Condensed e Caveat são servidas localmente, com licenças em public/fonts.
 
 ## Capítulos publicados
 
