@@ -15,4 +15,4 @@ Os anexos da conversa não foram disponibilizados como arquivos neste ambiente. 
 A capa é exibida na proporção original, inclusive no celular. Até os arquivos serem adicionados, há um placeholder de capa e a marca não é renderizada; nenhum símbolo substituto foi criado.
 
 ## Conteúdo
-Edite `src/content.js`: livro, capítulos, publicações e nove personagens. Todos os textos canônicos ausentes estão identificados como placeholders. Os visuais dos cards são composições tipográficas decorativas, sem imagens canônicas inventadas. As fontes têm alternativas locais e usam Google Fonts quando disponível.
+Edite `src/content.js`: livro, capítulos, publicações e nove personagens. Todos os textos canônicos ausentes estão identificados como placeholders. As publicações não usam imagens. O visual segue a referência de caderno: papel marfim, perfurações, recortes lilás, cabeçalho preto e anotações manuscritas. As fontes Barlow Condensed e Caveat são servidas localmente, com licenças em public/fonts.
