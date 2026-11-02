@@ -1,5 +1,14 @@
 // Conteúdo editorial: substitua os placeholders pelos textos aprovados do autor.
 export const book = {title:'ISOLADOS', author:'Vinícius Coradi Maddaloni', cover:'/images/capa-isolados.jpg', symbol:'/images/simbolo-isolados.png'};
+export const welcome = {
+ title: 'Obrigado por estar aqui.',
+ message: 'Obrigado por se interessar por ISOLADOS. Este é um projeto muito importante para mim, e fico feliz em compartilhar este espaço com você.',
+ invitation: 'Se quiser comentar sobre a obra, tirar dúvidas ou simplesmente conversar, envie um e-mail para:',
+ email: 'coradi.maddaloni@gmail.com',
+ rightsTitle: 'Uma nota sobre os direitos autorais',
+ rights: `ISOLADOS é uma obra de autoria e titularidade de ${book.author}. Todos os direitos reservados. Não é permitida a reprodução, distribuição, circulação ou divulgação não autorizada da obra, no todo ou em parte. Para solicitar autorização, entre em contato com o autor.`,
+ button: 'Continuar para o site'
+};
 export const characters = ['Vinicius','Miguel','Fernanda','Amanda','Jennyfer','Allan','Gabriel','Henrique','Jorge'].map(name=>({name, codename:'Codinome a inserir', description:'Descrição do personagem a inserir.', image:null}));
 export const chapters = [{number:1,title:'Título a inserir',text:null}];
 export const posts = [

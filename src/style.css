@@ -16,3 +16,25 @@ footer{padding:24px max(36px,calc((100% - 1380px)/2));display:flex;align-items:c
 @media(max-width:420px){.brand-note{display:none}.brand>span{font-size:78px}.post h2{font-size:28px}aside{gap:25px 14px}.sidebar-label{font-size:16px}.margin-note p{font-size:33px}.post-meta{flex-direction:column;gap:5px}.post-meta>span+span{border-left:0;padding:0}.chapter-list h2{font-size:19px}}
 @media(prefers-reduced-motion:no-preference){a,button{transition:color .15s ease,background-color .15s ease}}
 @media(min-width:761px) and (max-width:960px){.header-inner{flex-wrap:wrap}.menu-toggle{display:block;margin-left:auto;color:#f2e4ed;background:none;border:1px solid #a18c9d;padding:10px 14px;font-size:14px}.main-nav{display:none;width:100%;margin:0;justify-content:flex-start;gap:30px}.main-nav.open{display:flex}.main-nav a{font-size:20px}}
+/* Recado do autor: apresentado ao entrar; a navegação interna não o reabre. */
+body.welcome-open{overflow:hidden}
+.welcome-dialog{width:min(610px,calc(100% - 36px));max-height:calc(100dvh - 40px);margin:auto;padding:42px 38px 30px;border:1px solid #bbaa94;color:var(--ink);background:var(--grain),var(--paper);box-shadow:0 16px 70px #0006;overflow-y:auto}
+.welcome-dialog::backdrop{background:#17101ee0}
+.welcome-close-form{position:absolute;top:9px;right:12px}
+.welcome-close{border:0;background:transparent;color:var(--purple);font:30px/1 Georgia,serif;min-width:44px;min-height:44px;cursor:pointer}
+.welcome-dialog .category-label{font-size:13px;margin-bottom:20px;margin-right:20px}
+.welcome-dialog h2{font:normal 34px/1.2 Georgia,serif;letter-spacing:-.6px;margin:0 0 23px}
+.welcome-dialog h2:focus{outline:none}
+.welcome-dialog>p{font-size:17px;line-height:1.6;margin:0 0 16px}
+.welcome-email{display:inline-block;max-width:100%;overflow-wrap:anywhere;color:var(--purple);font-size:18px;text-decoration:underline;text-underline-offset:4px;line-height:1.5}
+.welcome-rights{border-top:1px solid var(--line);margin:25px 0 0;padding-top:20px}
+.welcome-rights h3{font:normal 15px/1.4 'Courier New',monospace;color:var(--purple);margin:0 0 11px}
+.welcome-rights p{font-size:14px;line-height:1.65;margin:0}
+.welcome-dialog .welcome-signature{font:27px/1.4 Hand,cursive;color:var(--purple);margin:18px 0 23px}
+.welcome-continue{display:block;width:100%;padding:14px 18px;min-height:48px;border:1px solid #4d2c67;background:#60377d;color:#fff7ed;cursor:pointer;font:16px Georgia,serif}
+.welcome-continue:hover{background:#4b2865}
+.welcome-continue span{margin-left:12px}
+footer .footer-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;font-size:13px}
+.welcome-reopen{background:none;border:0;padding:8px 0;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:4px;font:inherit}
+.welcome-reopen:hover{color:#dfb9ef}
+@media(max-width:420px){.welcome-dialog{padding:40px 21px 23px;width:calc(100% - 24px);max-height:calc(100dvh - 24px)}.welcome-dialog h2{font-size:28px}.welcome-dialog>p{font-size:16px}.welcome-email{font-size:16px}.welcome-rights p{font-size:13px}.welcome-close-form{right:6px;top:4px}}
