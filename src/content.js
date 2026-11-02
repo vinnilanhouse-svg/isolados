@@ -2,7 +2,7 @@ import { cover } from './cover.js';
 import { chapters } from './chapters.js';
 export { chapters };
 // Conteúdo editorial: substitua os placeholders pelos textos aprovados do autor.
-export const book = {title:'ISOLADOS', author:'Vinícius Coradi Maddaloni', cover, symbol:'/images/simbolo-isolados.png'};
+export const book = {title:'ISOLADOS', author:'Vinícius Coradi Maddaloni', tagline:'Nem todo herói é bom e nem todo vilão é mal', cover, symbol:'/images/simbolo-isolados.png'};
 export const synopsis = [
  'Imagine um mundo idêntico a este em que você vive, só que com algumas diferenças. Um átomo de carbono, no início de tudo, decidiu que iria um pouco para a esquerda, e isso possibilitou uma grande mudança no DNA de várias espécies. Essa mudança criou seres mais fortes, mais rápidos, mais inteligentes, e esses foram nomeados "SUPERS".',
  'O super mais poderoso e famoso de todos os tempos é o Midnight Warrior, um herói com o poder de destruir montanhas com seu soco sombrio.',

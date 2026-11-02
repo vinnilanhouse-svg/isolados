@@ -1,5 +1,8 @@
+import {bindTheme} from './theme.js';
+
 export function bindHeader() {
   const header = document.querySelector('.site-header');
+  bindTheme(header.querySelector('.theme-toggle'));
   const button = header.querySelector('.menu-toggle');
   const navigation = header.querySelector('.main-nav');
   function setOpen(open) {

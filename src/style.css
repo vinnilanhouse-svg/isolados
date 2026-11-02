@@ -48,3 +48,7 @@ footer .footer-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;f
 .synopsis-reading .synopsis-divider{text-align:center;color:var(--purple);font-size:22px}
 .synopsis-reading .read-link{display:inline-block;margin-top:15px}
 @media(max-width:420px){.brand{gap:8px}.brand>span{font-size:clamp(48px,15vw,64px)}.brand .mark{width:20px;height:36px}}
+.margin-note p{max-width:210px;line-height:1.1;text-wrap:balance}
+@media(max-width:760px){.margin-note p{max-width:100%;font-size:31px}}
+.book-symbol{display:block;width:61px;height:68px;background:currentColor;mask-image:url('/images/simbolo-isolados.png');mask-mode:luminance;mask-repeat:no-repeat;mask-position:center;mask-size:contain}
+.about-sketch.book-symbol{bottom:12px;right:14px;color:#ab8fb5;opacity:.52;pointer-events:none}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 110">
+  <defs>
+    <filter id="charred-edge" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".11 .19" numOctaves="3" seed="17" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="3.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="380" height="110" fill="white"/>
+  <g fill="black" filter="url(#charred-edge)">
+    <!-- Bordas consumidas e pequenas perfurações de queimado. -->
+    <path d="M0 100 C5 99 6 91 10 94 C15 98 14 102 19 99 C23 96 24 85 29 87 C34 88 32 98 38 99 C43 101 46 95 49 97 C54 102 59 99 62 94 C65 90 69 91 71 98 C73 104 80 103 83 98 C89 88 94 96 97 99 C104 104 111 103 114 98 C118 92 119 80 125 83 C130 87 128 97 134 99 C141 104 144 96 149 98 C154 104 163 102 166 96 C171 88 176 93 179 98 C182 103 190 102 193 96 C197 90 195 82 201 83 C207 85 204 97 211 99 C219 103 225 97 229 100 C237 104 243 97 244 91 C246 85 251 86 253 94 C256 103 264 103 270 96 C275 91 279 95 281 99 C286 104 293 101 295 94 C297 85 301 79 305 83 C309 88 306 97 313 99 C321 103 328 95 331 98 C336 103 343 100 347 93 C352 87 357 92 358 97 C361 103 367 101 370 96 C374 90 378 94 380 96 L380 110 H0Z"/>
+    <path d="M52 0 C53 4 48 9 51 13 C54 17 59 11 59 7 C58 3 62 2 62 0Z M218 0 C219 5 214 11 218 15 C223 18 227 12 225 8 C223 4 227 1 228 0Z M336 0 C337 3 333 7 336 11 C340 14 344 9 342 6 C340 3 344 1 344 0Z"/>
+    <ellipse cx="28" cy="76" rx="2.4" ry="3.1"/>
+    <ellipse cx="68" cy="84" rx="1.7" ry="2.3"/>
+    <ellipse cx="119" cy="68" rx="2.1" ry="2.9"/>
+    <ellipse cx="161" cy="83" rx="1.7" ry="2.2"/>
+    <ellipse cx="199" cy="74" rx="1.5" ry="2.3"/>
+    <ellipse cx="250" cy="79" rx="2.1" ry="2.7"/>
+    <ellipse cx="300" cy="67" rx="2.1" ry="3.2"/>
+    <ellipse cx="351" cy="78" rx="2.2" ry="2.7"/>
+  </g>
+  <g fill="#444">
+    <circle cx="17" cy="52" r=".8"/><circle cx="45" cy="67" r=".7"/>
+    <circle cx="83" cy="77" r="1"/><circle cx="106" cy="34" r=".6"/>
+    <circle cx="132" cy="74" r=".8"/><circle cx="175" cy="58" r=".7"/>
+    <circle cx="209" cy="43" r=".7"/><circle cx="236" cy="71" r=".9"/>
+    <circle cx="275" cy="80" r="1"/><circle cx="322" cy="65" r=".8"/>
+    <circle cx="366" cy="37" r=".6"/>
+  </g>
+</svg>
