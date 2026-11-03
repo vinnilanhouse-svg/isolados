@@ -34,4 +34,4 @@ O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Água (tot
 
 ## Fichas dos personagens
 
-Os nove nomes civis, codinomes e enquadramentos ficam em `src/characters.js`. A arte em `public/images/personagens-isolados.png` é a versão sem textos gerada a pedido do autor a partir da referência enviada. Cada ficha usa um recorte visual da mesma arte, sem redesenhar individualmente os retratos. O codinome aparece em destaque e o nome civil logo abaixo. As biografias ainda aguardam textos do autor.
+Os nove nomes civis, codinomes e caminhos dos retratos ficam em `src/characters.js`. Cada protagonista tem uma imagem própria em `public/images/characters/`, gerada individualmente a pedido do autor. A composição em `public/images/personagens-isolados.png` permanece como referência visual. O codinome aparece em destaque e o nome civil logo abaixo. As biografias ainda aguardam textos do autor.

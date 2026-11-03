@@ -58,16 +58,4 @@ if (preferredIcons.length === 1) {
   await writeFile('dist/index.html', html.replace('href="/images/simbolo-isolados.png"', `href="/${destination}"`));
   console.log(`Ícone da aba incluído sem alterações: ${source}`);
 }
-// A nova composição do elenco pode manter o nome original do upload.
-const otherArtwork = candidates.filter(file => !preferred.includes(file) && !iconCandidates.includes(file) && /\.(jpe?g|png|webp)$/i.test(file));
-const namedCharacterArtwork = otherArtwork.filter(file => /(?:^|[ _-])(?:personagens|elenco|characters)(?:[ _.-]|$)/i.test(basename(file)));
-const characterArtwork = namedCharacterArtwork.length ? namedCharacterArtwork : otherArtwork;
-if (characterArtwork.length === 1) {
-  const source = characterArtwork[0];
-  const destination = `images/personagens-isolados${extname(source).toLowerCase()}`;
-  await mkdir('dist/images', { recursive: true });
-  await cp(source, join('dist', destination));
-  await writeFile('dist/src/character-art.js', `export const characterArtwork = ${JSON.stringify('/' + destination)};\n`);
-  console.log(`Arte dos personagens incluída sem alterações: ${source}`);
-}
 console.log('Build concluído: dist/');
