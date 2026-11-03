@@ -49,7 +49,7 @@ export function chapterReading(chapters, number) {
           <output aria-live="polite" aria-label="Tamanho atual do texto">18 px</output>
           <button type="button" data-font-increase aria-label="Aumentar tamanho do texto">A+</button>
         </fieldset>
-        <label class="reading-spacing">Espaçamento entre linhas
+        <label class="reading-spacing">Entrelinhas
           <select aria-label="Espaçamento entre linhas">
             <option value="1.6">Compacto</option>
             <option value="1.9" selected>Confortável</option>
@@ -57,9 +57,14 @@ export function chapterReading(chapters, number) {
           </select>
         </label>
         <button class="reading-reset" type="button" data-reading-reset>Restaurar padrão</button>
+        <button class="reading-close" type="button" data-reading-close>Fechar ajustes</button>
       </div>
     </details>
     ${text}
+    ${!next ? `<section class="publication-status" aria-labelledby="publication-status-title">
+      <p>Você chegou ao último capítulo disponível.</p>
+      <h3 id="publication-status-title">Mais capítulos em breve.</h3>
+    </section>` : ''}
     <nav class="chapter-nav" aria-label="Navegação de capítulos">
       ${previous ? `<a rel="prev" href="#/capitulos/${previous.number}">← Capítulo anterior</a>` : ''}
       <a href="#/capitulos">Índice de capítulos</a>

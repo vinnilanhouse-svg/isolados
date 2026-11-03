@@ -38,9 +38,13 @@ O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Água (tot
 
 Na página inicial, o bloco “Comece por aqui” traz a capa do primeiro capítulo, o acesso à leitura e a sinopse, logo acima do marcador. O convite usa papel marfim e o marcador usa um recorte roxo com ícone de fita e botão de retomada, inspirados na proposta visual 5. Ambos se adaptam ao celular e aos quatro temas.
 
-O site salva o último capítulo e a passagem visível no navegador, sem conta. O cartão “Continuar de onde parei” aparece na página inicial e no índice depois de abrir um capítulo. Ele retoma a passagem salva; recarregar o capítulo também restaura a leitura. O marcador usa uma posição no texto, para acompanhar mudanças de fonte e largura de tela.
+O site salva a passagem de cada capítulo no navegador, sem conta. Abrir outro capítulo para consultar ou voltar ao topo não apaga o ponto anterior. O marcador principal muda quando o leitor avança um trecho na outra leitura. As posições ficam em `isolados-reading-library`, com migração automática do marcador antigo, preservado para compatibilidade. O cartão “Continuar de onde parei” aparece na página inicial e no índice. Reabrir um capítulo restaura sua passagem salva. O marcador usa uma posição no texto para acompanhar mudanças de fonte e largura de tela.
 
-“Ajustar leitura”, dentro dos capítulos, permite escolher o tamanho de 16 a 28 px e três espaçamentos de linha, com opção de restaurar o padrão. As preferências ficam salvas no mesmo navegador. O texto original não é modificado. O controle permanece acessível durante a rolagem e funciona nos quatro temas. Se o armazenamento estiver indisponível, os controles continuam funcionando durante a visita.
+“Ajustar leitura”, dentro dos capítulos, permite escolher o tamanho de 16 a 28 px e três espaçamentos de linha, com opção de restaurar o padrão. O painel é compacto e pode ser recolhido por “Fechar ajustes”, pelo título ou com Escape, preservando a passagem visível. As preferências ficam salvas no mesmo navegador. O texto original não é modificado. O controle permanece acessível durante a rolagem e funciona nos quatro temas. Se o armazenamento estiver indisponível, os controles continuam funcionando durante a visita.
+
+As publicações e o arquivo lateral da página inicial seguem a ordem decrescente dos capítulos, e o bloco “NOVO CAPÍTULO”, abaixo do marcador, destaca automaticamente o mais recente disponível. O índice e a navegação de leitura continuam na ordem 1–9. Ao terminar o último disponível, uma mensagem informa “Você chegou ao último capítulo disponível” e “Mais capítulos em breve”, fora do texto original.
+
+A mensagem do autor aparece automaticamente até ser fechada na primeira visita. Depois, continua acessível pelo botão “Mensagem do autor” no rodapé, com a preferência salva no navegador.
 
 ## Fichas dos personagens
 

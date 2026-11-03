@@ -1,7 +1,6 @@
 import { chapterArtwork, escapeHtml } from './reader.js';
 import { defaultReadingPreferences, getReadingPreferences, saveReadingPreferences, getReadingProgress, saveReadingProgress } from './reading-state.js';
 
-let initialPage = true;
 let pendingResume = null;
 
 export function startReadingCard(chapters) {
@@ -35,9 +34,8 @@ export function resumeReadingCard(chapters) {
 }
 
 export function bindReading() {
-  const saved = pendingResume || (initialPage ? getReadingProgress() : null);
+  const requestedResume = pendingResume;
   pendingResume = null;
-  initialPage = false;
   for (const link of document.querySelectorAll('[data-resume-reading]')) {
     link.addEventListener('click', event => {
       if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) pendingResume = getReadingProgress();
@@ -48,7 +46,9 @@ export function bindReading() {
   const text = article?.querySelector('.chapter-text');
   if (!text?.firstChild) return () => {};
   const chapter = Number(article.dataset.chapter);
+  const saved = requestedResume?.chapter === chapter ? requestedResume : getReadingProgress(chapter);
   const controls = article.querySelector('.reading-settings');
+  const summary = controls.querySelector('summary');
   const decrease = controls.querySelector('[data-font-decrease]');
   const increase = controls.querySelector('[data-font-increase]');
   const size = controls.querySelector('output');
@@ -59,6 +59,7 @@ export function bindReading() {
   let timer;
   let viewportWidth = innerWidth;
   let currentAnchor = { chapter, offset: 0, delta: 0, started: false };
+  let entryAnchor = currentAnchor;
 
   function applyPreferences() {
     text.style.setProperty('--reader-font-size', `${preferences.fontSize}px`);
@@ -105,7 +106,9 @@ export function bindReading() {
   function save() {
     if (!ready || cancelled || document.querySelector('dialog[open]')) return;
     currentAnchor = capture();
-    saveReadingProgress(currentAnchor);
+    // Uma consulta rápida preserva o marcador principal. Avançar um trecho passa a contar como leitura.
+    const activate = currentAnchor.started && Math.abs(currentAnchor.offset - entryAnchor.offset) >= 160;
+    saveReadingProgress(currentAnchor, { activate });
   }
 
   function scheduleSave() {
@@ -131,6 +134,32 @@ export function bindReading() {
   increase.addEventListener('click', () => changePreferences({ ...preferences, fontSize: Math.min(28, preferences.fontSize + 2) }));
   spacing.addEventListener('change', () => changePreferences({ ...preferences, lineHeight: Number(spacing.value) }));
   controls.querySelector('[data-reading-reset]').addEventListener('click', () => changePreferences({ ...defaultReadingPreferences }));
+  function closeSettings() {
+    const anchor = capture();
+    ready = false;
+    controls.open = false;
+    summary.focus({ preventScroll: true });
+    requestAnimationFrame(() => {
+      if (cancelled) return;
+      restore(anchor);
+      ready = true;
+      save();
+    });
+  }
+  controls.querySelector('[data-reading-close]').addEventListener('click', closeSettings);
+  summary.addEventListener('click', event => {
+    if (controls.open) {
+      event.preventDefault();
+      closeSettings();
+    }
+  });
+  controls.addEventListener('toggle', () => { summary.textContent = controls.open ? 'Ocultar ajustes' : 'Ajustar leitura'; });
+  controls.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && controls.open) {
+      event.preventDefault();
+      closeSettings();
+    }
+  });
   function visibilityChanged() { if (document.visibilityState === 'hidden') save(); }
   function resized() {
     // A barra de endereço móvel muda a altura durante a rolagem; só a largura redistribui o texto.
@@ -158,6 +187,7 @@ export function bindReading() {
     requestAnimationFrame(() => {
       if (cancelled) return;
       if (saved?.chapter === chapter) restore(saved);
+      entryAnchor = capture();
       ready = true;
       article.dataset.readingReady = 'true';
       save();

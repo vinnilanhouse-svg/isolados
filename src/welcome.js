@@ -2,8 +2,11 @@ import { book, welcome } from './content.js';
 
 let dialog;
 let returnFocus;
+let seen = false;
+try { seen = localStorage.getItem('isolados-welcome-seen') === '1'; } catch { /* Armazenamento opcional. */ }
 
 export function showWelcome(opener) {
+  if (!opener && seen) return;
   if (!dialog) {
     dialog = document.createElement('dialog');
     dialog.className = 'welcome-dialog';
@@ -35,6 +38,8 @@ export function showWelcome(opener) {
       }
     });
     dialog.addEventListener('close', () => {
+      seen = true;
+      try { localStorage.setItem('isolados-welcome-seen', '1'); } catch { /* A mensagem continua disponível no rodapé. */ }
       document.body.classList.remove('welcome-open');
       const target = returnFocus?.isConnected ? returnFocus : document.querySelector('.brand');
       target?.focus({ preventScroll: true });
