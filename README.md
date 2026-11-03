@@ -30,7 +30,7 @@ A sinopse fornecida pelo autor está em `src/content.js` e pode ser lida em `/#/
 
 ## Aparência
 
-O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Nuvem (claro, papel marfim), Gota (totalmente escuro) e Pedra (tom intermediário). A escolha fica salva no navegador. Preferências de modo claro/escuro da versão anterior são preservadas.
+O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Água (totalmente escuro), Terra (tom intermediário) e Ar (claro, papel marfim). A escolha fica salva no navegador. Preferências de modo claro/escuro da versão anterior são preservadas.
 
 ## Fichas dos personagens
 

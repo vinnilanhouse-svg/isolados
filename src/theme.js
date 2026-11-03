@@ -1,14 +1,14 @@
 const themes = [
   { id: 'fire', name: 'Fogo', description: 'Totalmente claro', path: '<path d="M12 2c2 4-1 5 1 8 1-1 2-2 2-4 4 4 6 7 5 11a8 8 0 0 1-15-1c-.5-3 1-6 4-9-.5 3 0 4 1 5 2-3 0-6 2-10Z"/><path d="M10 21c-2-3-1-5 2-8 0 2 3 4 3 6a3 3 0 0 1-1 2"/>' },
-  { id: 'cloud', name: 'Nuvem', description: 'Claro', path: '<path d="M7 19a5 5 0 1 1-.7-10 6.5 6.5 0 0 1 12.5 1.6A4.3 4.3 0 0 1 18 19H7Z"/>' },
-  { id: 'water', name: 'Gota', description: 'Totalmente escuro', path: '<path d="M12 2S5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12Z"/><path d="M8.5 14a3.5 3.5 0 0 0 3.5 3.5"/>' },
-  { id: 'stone', name: 'Pedra', description: 'Meio-termo', path: '<path d="m4 8 5-5 9 2 4 9-6 7H6l-4-7 2-6Z"/><path d="m4 8 8 2 6-5M12 10l4 11M2 14l10-4 10 4"/>' }
+  { id: 'water', name: 'Água', description: 'Totalmente escuro', path: '<path d="M12 2S5 10 5 14a7 7 0 0 0 14 0c0-4-7-12-7-12Z"/><path d="M8.5 14a3.5 3.5 0 0 0 3.5 3.5"/>' },
+  { id: 'stone', name: 'Terra', description: 'Meio-termo', path: '<path d="m4 8 5-5 9 2 4 9-6 7H6l-4-7 2-6Z"/><path d="m4 8 8 2 6-5M12 10l4 11M2 14l10-4 10 4"/>' },
+  { id: 'cloud', name: 'Ar', description: 'Claro', path: '<path d="M7 19a5 5 0 1 1-.7-10 6.5 6.5 0 0 1 12.5 1.6A4.3 4.3 0 0 1 18 19H7Z"/>' }
 ];
 let panel;
 let opener;
 
 function currentTheme() {
-  return themes.find(theme => theme.id === document.documentElement.dataset.theme) || themes[1];
+  return themes.find(theme => theme.id === document.documentElement.dataset.theme) || themes.find(theme => theme.id === 'cloud');
 }
 
 function icon(theme) {
