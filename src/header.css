@@ -224,9 +224,6 @@
 .site-header .theme-toggle{display:flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;padding:11px;border:1px solid #b99dc04d;background:#ffffff03;color:#e5d5e9;cursor:pointer}
 .site-header .theme-toggle:hover{background:#c398df12;border-color:#b99dc08c}
 .theme-toggle svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.theme-toggle .theme-icon--sun{display:none}
-[data-theme='dark'] .theme-toggle .theme-icon--sun{display:block}
-[data-theme='dark'] .theme-toggle .theme-icon--moon{display:none}
 @media(max-width:1160px){.site-header .header-controls{grid-column:3;grid-row:1}}
 @media(max-width:650px){.site-header .header-inner{column-gap:12px}.site-header .header-controls{grid-column:2;grid-row:1;gap:6px}.site-header .brand{padding:0;gap:9px}.site-header .brand-title{font-size:clamp(46px,15vw,70px)}.site-header .brand .mark{width:48px;height:56px}}
 

@@ -52,3 +52,10 @@ footer .footer-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;f
 @media(max-width:760px){.margin-note p{max-width:100%;font-size:31px}}
 .book-symbol{display:block;width:61px;height:68px;background:currentColor;mask-image:url('/images/simbolo-isolados.png');mask-mode:luminance;mask-repeat:no-repeat;mask-position:center;mask-size:contain}
 .about-sketch.book-symbol{bottom:12px;right:14px;color:#ab8fb5;opacity:.52;pointer-events:none}
+.character-photo{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--surface,var(--paper));border:1px solid var(--line);margin:0 0 23px}
+.character-photo>img{position:absolute;display:block;max-width:none;width:var(--portrait-width);height:auto;left:var(--portrait-left);top:var(--portrait-top)}
+.character-photo>.portrait-placeholder{position:absolute;inset:0;height:auto;margin:0}
+.character-card .hero-name{font:400 36px/1.1 'Isolados Display',Impact,sans-serif;letter-spacing:.8px;margin:9px 0 5px;color:var(--ink)}
+.character-card .civil-name{font:17px/1.5 Georgia,serif;color:var(--muted);margin:0 0 17px}
+.character-card .character-description{font-size:12px;color:var(--muted);margin:0 0 18px}
+.character-grid--single{grid-template-columns:minmax(0,440px);justify-content:center}

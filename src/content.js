@@ -18,7 +18,7 @@ export const welcome = {
  rights: `ISOLADOS é uma obra de autoria e titularidade de ${book.author}. Todos os direitos reservados. Não é permitida a reprodução, distribuição, circulação ou divulgação não autorizada da obra, no todo ou em parte. Para solicitar autorização, entre em contato com o autor.`,
  button: 'Continuar para o site'
 };
-export const characters = ['Vinicius','Miguel','Fernanda','Amanda','Jennyfer','Allan','Gabriel','Henrique','Jorge'].map(name=>({name, codename:'Codinome a inserir', description:'Descrição do personagem a inserir.', image:null}));
+export { characters } from './characters.js';
 export const posts = [
  ...chapters.filter(chapter=>chapter.number>=1&&chapter.number<=9).map(chapter=>({id:`capitulo-${chapter.number}`, category:'Capítulos', title:chapter.title, excerpt:chapter.text?.split('\n\n')[0]||'Texto a inserir pelo autor.', label:'Texto original do autor', href:`#/capitulos/${chapter.number}`})),
  {id:'universo', category:'Universo',title:'Universo — Artigo a inserir',excerpt:'Espaço reservado aos textos sobre espécies, poderes, lugares e organizações. O conteúdo será fornecido pelo autor.',label:'Conteúdo a inserir',href:'#/universo'},

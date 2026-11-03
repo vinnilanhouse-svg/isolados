@@ -27,3 +27,11 @@ Somente os capítulos 1–9 do arquivo **Isolados V2.pdf** foram importados, em 
 A importação compara integralmente cada capítulo com uma extração independente via pdftotext antes de gravar os arquivos. O registro de origem e os hashes estão em `scripts/chapter-import-audit.json`. Para reproduzir localmente, use `python3 scripts/import-chapters.py /caminho/arquivo.pdf` com pypdf, pdfplumber e pdftotext disponíveis. Essas ferramentas não são necessárias para o build ou a hospedagem. O PDF completo e os capítulos 10 em diante não são publicados.
 
 A sinopse fornecida pelo autor está em `src/content.js` e pode ser lida em `/#/sobre`, com acesso pela barra lateral.
+
+## Aparência
+
+O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Nuvem (claro, papel marfim), Gota (totalmente escuro) e Pedra (tom intermediário). A escolha fica salva no navegador. Preferências de modo claro/escuro da versão anterior são preservadas.
+
+## Fichas dos personagens
+
+Os nove nomes civis, codinomes e enquadramentos ficam em `src/characters.js`. A arte em `public/images/personagens-isolados.png` é a versão sem textos gerada a pedido do autor a partir da referência enviada. Cada ficha usa um recorte visual da mesma arte, sem redesenhar individualmente os retratos. O codinome aparece em destaque e o nome civil logo abaixo. As biografias ainda aguardam textos do autor.
