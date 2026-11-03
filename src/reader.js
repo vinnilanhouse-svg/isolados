@@ -4,6 +4,11 @@ export function escapeHtml(value) {
   })[character]);
 }
 
+export function chapterArtwork(cover, className, loading = 'lazy') {
+  if (!cover) return '';
+  return `<figure class="chapter-artwork ${className}"><img src="${escapeHtml(cover.src)}" alt="${escapeHtml(cover.alt)}" width="${cover.width}" height="${cover.height}" loading="${loading}" decoding="async"></figure>`;
+}
+
 // Esta edição do site publica somente os capítulos de 1 a 9.
 export function siteChapters(chapters) {
   return chapters.filter(chapter => Number.isInteger(chapter.number) && chapter.number >= 1 && chapter.number <= 9)
@@ -13,6 +18,7 @@ export function siteChapters(chapters) {
 export function chapterIndex(chapters) {
   return `<div class="chapter-list">${chapters.map(chapter => `
     <a href="#/capitulos/${chapter.number}">
+      ${chapterArtwork(chapter.cover, 'chapter-index-artwork')}
       <span class="chapter-number">${String(chapter.number).padStart(2, '0')}</span>
       <div><h2>${escapeHtml(chapter.title)}</h2>${chapter.text === null ? '<p>Texto a inserir pelo autor</p>' : ''}</div>
       <span aria-hidden="true">↗</span>
@@ -34,6 +40,7 @@ export function chapterReading(chapters, number) {
   return `<article class="reading chapter-reading">
     <span class="eyebrow">CAPÍTULO ${String(chapter.number).padStart(2, '0')}</span>
     <h2>${escapeHtml(chapter.title)}</h2>
+    ${chapterArtwork(chapter.cover, 'chapter-reading-artwork', 'eager')}
     ${text}
     <nav class="chapter-nav" aria-label="Navegação de capítulos">
       ${previous ? `<a rel="prev" href="#/capitulos/${previous.number}">← Capítulo anterior</a>` : ''}

@@ -18,7 +18,7 @@ O envio pode ser feito pelo GitHub, sem editar código: https://github.com/vinni
 A capa é exibida na proporção original, inclusive no celular. As imagens mantêm suas proporções originais, inclusive no celular.
 
 ## Conteúdo
-Edite `src/content.js`: livro, capítulos, publicações e nove personagens. Todos os textos canônicos ausentes estão identificados como placeholders. As publicações não usam imagens. O visual segue a referência de caderno: papel marfim, perfurações, recortes lilás, cabeçalho preto e anotações manuscritas. As fontes Bebas Neue, Barlow Condensed e Caveat são servidas localmente, com licenças em public/fonts.
+Edite `src/content.js`: livro, capítulos, publicações e nove personagens. Todos os textos canônicos ausentes estão identificados como placeholders. As publicações dos capítulos usam as capas aprovadas pelo autor. O visual segue a referência de caderno: papel marfim, perfurações, recortes lilás, cabeçalho preto e anotações manuscritas. As fontes Bebas Neue, Barlow Condensed e Caveat são servidas localmente, com licenças em public/fonts.
 
 ## Capítulos publicados
 
@@ -29,6 +29,8 @@ A importação compara integralmente cada capítulo com uma extração independe
 A sinopse fornecida pelo autor está em `src/content.js` e pode ser lida em `/#/sobre`, com acesso pela barra lateral.
 
 ## Aparência
+
+As nove capas de capítulo estão em `public/images/chapters/`, em WebP com a composição inteira e resolução de 1536 × 1024. O mapeamento e as descrições acessíveis ficam em `src/chapter-covers.js`, separados dos textos. As imagens aparecem nas publicações da página inicial, no índice e na abertura de cada capítulo. Foram usadas as versões aprovadas: Miguel transformado no capítulo 3; Jennyfer e Henrique surpresos no 4; Miguel determinado e os amigos surpresos no 8.
 
 O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Água (totalmente escuro), Terra (tom intermediário) e Ar (claro, papel marfim). A escolha fica salva no navegador. Preferências de modo claro/escuro da versão anterior são preservadas.
 

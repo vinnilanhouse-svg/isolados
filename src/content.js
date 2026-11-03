@@ -20,7 +20,7 @@ export const welcome = {
 };
 export { characters } from './characters.js';
 export const posts = [
- ...chapters.filter(chapter=>chapter.number>=1&&chapter.number<=9).map(chapter=>({id:`capitulo-${chapter.number}`, category:'Capítulos', title:chapter.title, excerpt:chapter.text?.split('\n\n')[0]||'Texto a inserir pelo autor.', label:'Texto original do autor', href:`#/capitulos/${chapter.number}`})),
+ ...chapters.filter(chapter=>chapter.number>=1&&chapter.number<=9).map(chapter=>({id:`capitulo-${chapter.number}`, category:'Capítulos', title:chapter.title, cover:chapter.cover, excerpt:chapter.text?.split('\n\n')[0]||'Texto a inserir pelo autor.', label:'Texto original do autor', href:`#/capitulos/${chapter.number}`})),
  {id:'universo', category:'Universo',title:'Universo — Artigo a inserir',excerpt:'Espaço reservado aos textos sobre espécies, poderes, lugares e organizações. O conteúdo será fornecido pelo autor.',label:'Conteúdo a inserir',href:'#/universo'},
  {id:'bastidores',category:'Bastidores',title:'Entre anotações e páginas',excerpt:'Um lugar para os registros do processo de escrita, as artes e o desenvolvimento do livro.',type:'notes',label:'Conteúdo a inserir',href:'#/bastidores/processo'}
 ];
