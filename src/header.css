@@ -67,26 +67,7 @@
   letter-spacing: 1px;
   color: #eee4de;
   transform: skew(-6deg);
-  mask-image: url('/textures/title-burn-mask.svg');
-  mask-mode: luminance;
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
-  filter: drop-shadow(0 0 .6px #a2714970);
-}
 
-/* Marcas de fuligem e bordas chamuscadas sobre letras claras. */
-@supports ((background-clip: text) or (-webkit-background-clip: text)) {
-  .site-header .brand-title {
-    color: transparent;
-    background-image:
-      radial-gradient(ellipse 13px 12px at 7% 84%, #38271d 10%, transparent 80%),
-      radial-gradient(ellipse 12px 17px at 32% 88%, #4a2f1e 15%, transparent 80%),
-      radial-gradient(ellipse 12px 14px at 53% 88%, #34251b 10%, transparent 85%),
-      radial-gradient(ellipse 15px 16px at 80% 84%, #47301f 10%, transparent 85%),
-      linear-gradient(180deg, #f1e8df 0%, #e9dfd2 62%, #d3bfa4 78%, #99734e 92%, #38291e 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
 }
 
 .site-header .brand-title::after { content: none; }
