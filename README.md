@@ -1,8 +1,8 @@
 # ISOLADOS
-Site literário de Vinícius Coradi Maddaloni. JavaScript, CSS e HTML, sem dependências de execução ou instalação.
+Site literário de ISOLADOS, obra de Vinícius Coradi Maddaloni. O site é de propriedade e responsabilidade da Elemental Corp. JavaScript, CSS e HTML estáticos; o SDK oficial da Vercel Analytics é incluído no build.
 
 ## Desenvolvimento
-Node.js 24.x. Execute `npm run dev`. Para produção: `npm run build`; para validar o resultado: `npm run preview`.
+Node.js 24.x. Instale com `npm ci`; execute `npm test` e `npm run build`. Para validar o resultado: `npm run preview`. O site compilado fica em `dist/`.
 
 ## Vercel
 Importe este repositório. A configuração `vercel.json` define `npm run build` e a saída `dist`. Não são necessárias variáveis ou segredos. As páginas usam rotas com hash para suportar atualização e links diretos em hospedagem estática.
@@ -49,3 +49,23 @@ A mensagem do autor aparece automaticamente até ser fechada na primeira visita.
 ## Fichas dos personagens
 
 Os nove nomes civis, codinomes e caminhos dos retratos ficam em `src/characters.js`. Cada protagonista tem uma imagem própria em `public/images/characters/`, gerada individualmente a pedido do autor. A composição em `public/images/personagens-isolados.png` permanece como referência visual. O codinome aparece em destaque e o nome civil logo abaixo. As biografias ainda aguardam textos do autor.
+
+## Comentários e curtidas
+
+Os nove capítulos têm participação ao final da leitura. A configuração pública do Supabase fica em `src/community-config.js`. Somente a URL do projeto e a chave publishable são usadas no navegador. Nunca incluir chave secret, service_role ou senha do banco.
+
+Para ativar, abra `/configurar-comentarios.html` na versão publicada: a página fornece o SQL completo com botão de copiar e link ao painel do projeto. Execute `supabase/setup.sql` no SQL Editor e ative **Authentication → Sign In / Providers → Anonymous Sign-Ins**. Nenhuma dessas ações pode ser feita com a chave pública enviada ao site.
+
+O visitante pode ler comentários aprovados sem autenticar. A identidade anônima é criada apenas ao curtir ou comentar e a sessão é mantida no navegador. A mesma identidade pode curtir uma vez por capítulo e desfazer a própria curtida. Isso não equivale a identificar uma pessoa civil: limpar dados ou trocar de navegador pode criar outra identidade.
+
+Os comentários entram com `approved = false`. Para publicar, o responsável usa **Table Editor → isolados_comments**, revisa e altera `approved` para `true`; para recusar ou remover, apaga pelo painel. Leitores não podem aprovar, editar ou apagar comentários pelo acesso público. Os identificadores de usuário não são expostos na lista pública. O banco limita envios e o formulário evita duplicação em reenvios de uma mesma mensagem. Não há conteúdo fictício ou números de engajamento de demonstração no site.
+
+Caso as tabelas ou a autenticação ainda não estejam prontas, ou a conexão falhe, o site apresenta indisponibilidade e mantém a leitura. Testes de interface usam respostas locais; as permissões do SQL também foram verificadas em PostgreSQL local com papéis anon/authenticated. A validação online exige as duas etapas administrativas acima e acesso ao projeto.
+
+## Métricas e privacidade
+
+O pacote `@vercel/analytics` usa a integração de JavaScript puro. A Vercel deve ter Web Analytics habilitado no projeto. As visitas podem ser consultadas em **Vercel → projeto → Analytics** depois do deploy e de visitas com aceitação das métricas, respeitando o plano e suas cotas.
+
+O SDK e o script de métricas não são carregados antes da aceitação. “Somente necessários” e “Aceitar métricas” têm destaque equivalente, com personalização e revogação pelo rodapé. O middleware bloqueia novos eventos após a revogação. As rotas com hash são registradas manualmente como caminhos conhecidos, como `/capitulos/3`; consultas, comentários, apelidos e identificadores de participação não são enviados como eventos. Recusa, indisponibilidade ou bloqueio das métricas não impedem a leitura ou participação.
+
+As páginas `/#/privacidade` e `/#/termos` descrevem os dados, finalidades, armazenamento, fornecedores, moderação, contato e escolhas implementadas. A Elemental Corp é a responsável pelo site; a autoria e os direitos do livro continuam de Vinícius Coradi Maddaloni. O contato informado é `coradi.maddaloni@gmail.com`. Não foram inventados razão social, CNPJ, endereço ou encarregado. O responsável deve validar a identificação jurídica, fundamentos, conservação, transferências e regras aplicáveis ao seu público antes de afirmar conformidade integral com a LGPD. Textos e controles técnicos, por si só, não certificam essa conformidade.

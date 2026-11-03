@@ -1,3 +1,5 @@
+import { chapterCommunity } from './community.js';
+
 export function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, character => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -70,5 +72,5 @@ export function chapterReading(chapters, number) {
       <a href="#/capitulos">Índice de capítulos</a>
       ${next ? `<a rel="next" href="#/capitulos/${next.number}">Próximo capítulo →</a>` : ''}
     </nav>
-  </article>`;
+  </article>${chapterCommunity(chapter.number)}`;
 }

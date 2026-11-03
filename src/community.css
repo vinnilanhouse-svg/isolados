@@ -1,0 +1,57 @@
+.chapter-reading{margin-bottom:42px}
+.chapter-community{max-width:760px;margin:0 auto 80px;padding:30px;border-top:2px solid var(--purple);background:var(--reading-surface);overflow-wrap:anywhere}
+.chapter-community h2{font:normal 32px/1.3 Georgia,serif;margin:30px 0 12px}
+.chapter-community h2:focus{outline:none}
+.community-intro,.comment-notice{font:14px/1.8 Georgia,serif;color:var(--muted)}
+.chapter-appreciation{padding-bottom:18px;border-bottom:1px solid var(--line)}
+.chapter-like{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;min-height:48px;max-width:100%;padding:11px 17px;border:1px solid var(--purple);background:var(--surface);color:var(--purple);font:16px/1.5 Georgia,serif;cursor:pointer}
+.chapter-like svg{height:21px;width:21px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5}
+.chapter-like[aria-pressed='true']{background:var(--tag);color:var(--tag-ink)}
+.chapter-like[aria-pressed='true'] svg{fill:currentColor}
+.chapter-like:disabled,.comment-form fieldset:disabled,.comment-submit:disabled{opacity:.6;cursor:default}
+.like-count{font:13px/1.5 'Courier New',monospace}
+.like-count:not(:empty){border-left:1px solid currentColor;padding-left:12px}
+.community-status{font:13px/1.7 Georgia,serif;color:var(--muted);min-height:1.7em;margin:10px 0}
+.comment-form fieldset{border:0;padding:0;margin:25px 0 0;min-width:0;display:grid;gap:17px}
+.comment-form label{display:flex;flex-direction:column;gap:7px;font:14px/1.6 Georgia,serif}
+.comment-form input,.comment-form textarea{width:100%;min-width:0;padding:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:16px/1.6 Georgia,serif;border-radius:0}
+.comment-form textarea{resize:vertical;min-height:130px}
+.comment-form .comment-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.comment-notice{margin:0;font-size:12px}
+.comment-notice a,.legal-reading a{color:var(--purple);text-decoration:underline;text-underline-offset:3px}
+.comment-submit{justify-self:start;min-height:46px;padding:11px 18px;border:1px solid var(--action);color:#fff8f3;background:var(--action);font:16px/1.5 Georgia,serif;cursor:pointer}
+.comments-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:35px;padding-top:24px;border-top:1px solid var(--line)}
+.comments-heading h3{font:normal 21px/1.4 Georgia,serif;margin:0}
+.community-text-button{min-height:44px;padding:8px 0;background:none;border:0;color:var(--purple);font:13px/1.6 Georgia,serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.community-text-button:disabled{opacity:.6;cursor:default}
+.reader-comment{padding:22px 0;border-bottom:1px solid var(--line)}
+.reader-comment-meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;font:14px/1.6 Georgia,serif}
+.reader-comment time{font-size:12px;color:var(--muted)}
+.reader-comment>p{white-space:pre-wrap;font:16px/1.8 Georgia,serif;margin:12px 0 0;overflow-wrap:anywhere}
+.chapter-community :is(button,input,textarea):focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+.legal-reading{max-width:760px;margin:0 auto 60px;font:17px/1.9 Georgia,serif;overflow-wrap:anywhere}
+.legal-reading h2{font:normal 33px/1.4 Georgia,serif}.legal-reading h3{font:normal 24px/1.4 Georgia,serif;margin:32px 0 14px}
+.legal-reading li{margin:0 0 12px}.legal-reading ul{padding-left:23px}
+.legal-privacy-button{min-height:44px;max-width:100%;padding:10px 15px;border:1px solid var(--purple);background:var(--surface);color:var(--purple);font:15px/1.6 Georgia,serif;cursor:pointer}
+body{padding-bottom:var(--privacy-banner-height,0px)}
+body.privacy-open{overflow:hidden}
+.privacy-banner{position:fixed;z-index:15;inset:auto 0 0;background:var(--surface);color:var(--ink);border-top:2px solid var(--purple);padding:19px max(24px,calc((100% - 1380px)/2));box-shadow:0 -3px 18px #0002;display:flex;align-items:center;justify-content:space-between;gap:25px;font:14px/1.6 Georgia,serif}
+.privacy-banner>div:first-child{max-width:730px;min-width:0}.privacy-banner strong{font-size:17px}.privacy-banner p{margin:5px 0 0}.privacy-banner a,.privacy-panel a{color:var(--purple);text-decoration:underline;text-underline-offset:3px}
+.privacy-banner-actions,.privacy-panel-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.privacy-banner button,.privacy-panel-actions button{min-height:44px;padding:10px 14px;border:1px solid var(--purple);background:var(--paper);color:var(--purple);font:14px/1.5 Georgia,serif;cursor:pointer}
+.privacy-banner button[data-manage]{border-color:var(--line)}
+.privacy-panel{width:min(600px,calc(100% - 28px));max-height:calc(100dvh - 28px);padding:27px;background:var(--surface);color:var(--ink);border:1px solid var(--line);overflow:auto;box-shadow:0 20px 80px #0005}
+.privacy-panel::backdrop{background:#100b17b8}
+.privacy-panel-heading{display:flex;align-items:start;justify-content:space-between;gap:15px}
+.privacy-panel h2{font:normal 27px/1.3 Georgia,serif;margin:0}
+.privacy-panel p{font:15px/1.8 Georgia,serif}
+.privacy-panel-close{width:44px;height:44px;flex:none;background:none;border:0;color:var(--purple);font:29px/1 Georgia,serif;cursor:pointer}
+.privacy-option{display:grid;grid-template-columns:22px minmax(0,1fr);gap:5px 10px;font:17px/1.6 Georgia,serif;margin:25px 0}
+.privacy-option input{width:19px;height:19px;margin:3px 0;accent-color:var(--purple)}
+.privacy-option span{grid-column:2;font-size:13px;color:var(--muted)}
+.privacy-banner :focus-visible,.privacy-panel :focus-visible,.legal-reading :focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+footer .footer-owner{display:flex;align-items:center;gap:8px;font:12px/1.6 Georgia,serif;letter-spacing:0}
+footer .footer-owner .mark{width:20px;height:27px}footer .footer-owner>span{border:0;padding:0;font:inherit}
+.privacy-reopen{min-height:44px;border:0;padding:8px 0;background:none;color:inherit;font:inherit;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+@media(max-width:1000px){.privacy-banner{align-items:start;flex-direction:column;gap:14px}.privacy-banner>div:first-child{max-width:none}}
+@media(max-width:760px){.chapter-community{padding:24px 0;margin-bottom:45px}.chapter-community h2{font-size:29px}.legal-reading{font-size:16px}.privacy-banner{padding:16px 20px;font-size:13px}.privacy-banner-actions{width:100%;gap:8px}.privacy-banner button{font-size:13px;padding:9px 12px}.privacy-panel{padding:22px}.privacy-panel h2{font-size:25px}.privacy-panel-actions button{flex:1}.privacy-banner button[data-reject],.privacy-banner button[data-accept]{flex:1}}

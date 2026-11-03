@@ -11,6 +11,13 @@ try {
   if (error.code !== 'ENOENT') throw error;
 }
 if (publicExists) await cp('public','dist',{recursive:true});
+await mkdir('dist/vendor', { recursive: true });
+await cp('node_modules/@vercel/analytics/dist/index.mjs', 'dist/vendor/vercel-analytics.js');
+await cp('node_modules/@vercel/analytics/LICENSE', 'dist/vendor/vercel-analytics.LICENSE');
+const setupTemplate = await readFile('public/configurar-comentarios.html', 'utf8');
+const setupSql = await readFile('supabase/setup.sql', 'utf8');
+const escapedSql = setupSql.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+await writeFile('dist/configurar-comentarios.html', setupTemplate.replace('__ISOLADOS_SQL__', () => escapedSql));
 
 // Aceita o nome original do arquivo enviado pelo autor pelo GitHub.
 // Um nome explícito tem prioridade; os demais só são usados sem ambiguidade.
