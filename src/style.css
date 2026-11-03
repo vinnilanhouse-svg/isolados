@@ -74,9 +74,6 @@ footer .footer-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;f
 @media(max-width:760px){.post--illustrated{grid-template-columns:minmax(0,1fr);gap:27px}.post-cover-link{width:100%;max-width:540px}.chapter-list>a{gap:14px}.chapter-index-artwork{flex-basis:100px;padding:4px}.chapter-reading-artwork{margin:23px 0 30px}}
 @media(max-width:420px){.chapter-list>a{gap:10px}.chapter-index-artwork{flex-basis:78px;padding:3px}.chapter-list .chapter-number{font-size:24px}.chapter-list h2{font-size:18px;line-height:1.4}}
 /* Preferências e marcador pessoal, sem alterar o texto do autor. */
-.resume-reading{padding:23px 25px 26px;margin:0 0 35px;border:1px solid var(--line);border-left:3px solid var(--purple);background:var(--grain),var(--surface)}
-.resume-reading h2{font:normal 25px/1.4 Georgia,serif;margin:12px 0 18px;letter-spacing:0}
-.resume-reading .read-link{display:inline-block;line-height:1.7}
 .chapter-text{font-size:var(--reader-font-size,18px);line-height:var(--reader-line-height,1.9)}
 .reading-settings{position:sticky;top:10px;z-index:3;border:1px solid var(--line);background:var(--surface);box-shadow:0 3px 8px #0001;margin:0 0 24px}
 .reading-settings>summary{padding:12px 17px;min-height:46px;cursor:pointer;color:var(--purple);font:15px/1.5 'Courier New',monospace}
@@ -94,4 +91,31 @@ footer .footer-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;f
 .reading-spacing select{max-width:100%}
 .reading-reset{font-size:13px;text-decoration:underline;text-underline-offset:3px}
 .reading-settings :is(button,select):focus-visible{outline:3px solid var(--purple);outline-offset:3px}
-@media(max-width:420px){.resume-reading{padding:19px}.resume-reading h2{font-size:22px}.reading-settings-body{gap:16px;padding:4px 13px 15px}.reading-spacing{flex:1 1 100%}.reading-reset{width:100%}}
+@media(max-width:420px){.reading-settings-body{gap:16px;padding:4px 13px 15px}.reading-spacing{flex:1 1 100%}.reading-reset{width:100%}}
+/* Os dois recortes da proposta 5: convite em papel marfim e marcador roxo. */
+:root{--bookmark-paper:#432b4d;--bookmark-ink:#fff4e6;--bookmark-accent:#d8a9eb;--bookmark-button:#d8a9eb;--bookmark-button-ink:#291532}
+:root[data-theme='fire']{--bookmark-paper:#ead9f0;--bookmark-ink:#321a40;--bookmark-accent:#694080;--bookmark-button:#694080;--bookmark-button-ink:#fff8f3}
+.start-reading,.resume-reading{position:relative;isolation:isolate;min-width:0;filter:drop-shadow(0 3px 3px #0002)}
+.start-reading::before,.resume-reading::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;clip-path:polygon(0 2%,2% 0,5% 1%,11% 0,18% 1%,27% 0,36% 1%,44% 0,52% 1%,62% 0,73% 1%,84% 0,94% 1%,99% 0,100% 3%,99.7% 25%,100% 48%,99.6% 73%,100% 96%,98% 100%,92% 99%,83% 100%,76% 98.7%,68% 100%,58% 99%,49% 100%,41% 98.8%,30% 100%,21% 99%,12% 100%,5% 99%,1% 100%,0 96%,.3% 75%,0 50%,.4% 22%)}
+.start-reading{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);align-items:center;gap:24px;padding:20px 23px;margin:0 0 23px;color:#251b29}
+.start-reading::before{background:var(--grain),linear-gradient(115deg,#f0dfc4,#fbf2e1 55%,#edddc3);box-shadow:inset 0 0 0 1px #c9b69b}
+.start-reading-cover{background:#fbf3e4;border-color:#bba88c;padding:4px;box-shadow:0 2px 4px #48311b33}
+.start-reading-copy{min-width:0;border-left:1px solid #a68d7966;padding:4px 0 4px 24px}
+.reading-paper-label{display:inline-block;color:#2c1b26;background:var(--grain),#ead7b5;box-shadow:0 2px 2px #0002;padding:5px 10px;font:12px/1.5 'Courier New',monospace;letter-spacing:.5px}
+.start-reading h2{font:italic 34px/1.25 Georgia,serif;letter-spacing:-.6px;margin:17px 0 23px;position:relative}
+.start-reading h2::after{content:'';position:absolute;bottom:-9px;left:0;width:90px;border-bottom:2px solid #9865ad;transform:rotate(-2deg)}
+.start-reading-actions{display:flex;flex-wrap:wrap;gap:4px 22px}
+.start-reading-actions a{color:#51216c;text-decoration:underline;text-underline-offset:4px;font:16px/1.7 Georgia,serif;display:inline-block;padding:6px 0}
+.start-reading a:hover{color:#783f92}
+.start-reading a:focus-visible{outline-color:#60377d}
+.resume-reading{display:grid;grid-template-columns:35px minmax(0,1fr) auto;align-items:center;gap:21px;padding:22px 25px;margin:0 0 35px;color:var(--bookmark-ink)}
+.resume-reading::before{background:var(--grain),var(--bookmark-paper)}
+.resume-reading-icon{display:block;width:35px;height:48px;color:var(--bookmark-accent)}
+.resume-reading-copy{border-left:1px solid #e5c4ee55;padding-left:22px;min-width:0}
+.resume-reading h2{font:italic 28px/1.3 Georgia,serif;letter-spacing:-.3px;margin:13px 0 5px;color:var(--bookmark-ink);overflow-wrap:anywhere}
+.resume-reading .reading-paper-label{font-size:10px;padding:3px 8px;letter-spacing:.3px}
+.resume-reading .read-link{display:inline-block;background:var(--bookmark-button);color:var(--bookmark-button-ink);padding:10px 17px;min-height:44px;font:16px/1.5 Georgia,serif;text-decoration:none;text-align:center;border:1px solid transparent;box-shadow:0 2px 3px #0002}
+.resume-reading .read-link:hover{filter:brightness(1.08);text-decoration:underline;text-underline-offset:3px}
+.resume-reading .read-link:focus-visible{outline-color:var(--bookmark-accent)}
+@media(max-width:1100px){.start-reading{gap:18px;padding:18px}.start-reading-copy{padding-left:18px}.start-reading h2{font-size:29px}.resume-reading{grid-template-columns:30px minmax(0,1fr);gap:16px;padding:21px}.resume-reading .read-link{grid-column:2;justify-self:start}.resume-reading-copy{padding-left:16px}.resume-reading-icon{width:30px}.resume-reading h2{font-size:27px}}
+@media(max-width:600px){.start-reading{grid-template-columns:minmax(0,1fr);gap:18px;padding:18px}.start-reading-copy{border-left:0;border-top:1px solid #a68d7966;padding:19px 3px 4px}.start-reading h2{font-size:31px}.start-reading-actions{gap:2px 22px}.resume-reading{padding:22px 17px;gap:15px 12px}.resume-reading-copy{padding-left:13px}.resume-reading h2{font-size:25px}.resume-reading .read-link{grid-column:1/-1;justify-self:stretch}.resume-reading .reading-paper-label{font-size:10px;letter-spacing:0}}

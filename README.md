@@ -36,6 +36,8 @@ O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Água (tot
 
 ## Leitura e marcador
 
+Na página inicial, o bloco “Comece por aqui” traz a capa do primeiro capítulo, o acesso à leitura e a sinopse, logo acima do marcador. O convite usa papel marfim e o marcador usa um recorte roxo com ícone de fita e botão de retomada, inspirados na proposta visual 5. Ambos se adaptam ao celular e aos quatro temas.
+
 O site salva o último capítulo e a passagem visível no navegador, sem conta. O cartão “Continuar de onde parei” aparece na página inicial e no índice depois de abrir um capítulo. Ele retoma a passagem salva; recarregar o capítulo também restaura a leitura. O marcador usa uma posição no texto, para acompanhar mudanças de fonte e largura de tela.
 
 “Ajustar leitura”, dentro dos capítulos, permite escolher o tamanho de 16 a 28 px e três espaçamentos de linha, com opção de restaurar o padrão. As preferências ficam salvas no mesmo navegador. O texto original não é modificado. O controle permanece acessível durante a rolagem e funciona nos quatro temas. Se o armazenamento estiver indisponível, os controles continuam funcionando durante a visita.

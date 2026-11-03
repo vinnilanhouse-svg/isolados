@@ -1,16 +1,35 @@
-import { escapeHtml } from './reader.js';
+import { chapterArtwork, escapeHtml } from './reader.js';
 import { defaultReadingPreferences, getReadingPreferences, saveReadingPreferences, getReadingProgress, saveReadingProgress } from './reading-state.js';
 
 let initialPage = true;
 let pendingResume = null;
+
+export function startReadingCard(chapters) {
+  const first = chapters.find(chapter => chapter.number === 1);
+  if (!first) return '';
+  return `<section class="start-reading" aria-label="Comece por aqui">
+    ${chapterArtwork(first.cover, 'start-reading-cover')}
+    <div class="start-reading-copy">
+      <span class="reading-paper-label">COMECE POR AQUI</span>
+      <h2>${escapeHtml(first.title)}</h2>
+      <div class="start-reading-actions">
+        <a href="#/capitulos/${first.number}">Ler o primeiro capítulo <span aria-hidden="true">→</span></a>
+        <a href="#/sobre">Ler a sinopse <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>`;
+}
 
 export function resumeReadingCard(chapters) {
   const saved = getReadingProgress();
   const chapter = chapters.find(item => item.number === saved?.chapter);
   if (!chapter) return '';
   return `<section class="resume-reading" aria-label="Sua leitura">
-    <span class="eyebrow">SEU MARCADOR DE PÁGINA</span>
-    <h2>${escapeHtml(chapter.title)}</h2>
+    <svg class="resume-reading-icon" viewBox="0 0 32 44" fill="none" aria-hidden="true"><path d="M5 3h22v36L16 31 5 39V3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    <div class="resume-reading-copy">
+      <span class="reading-paper-label">SEU MARCADOR DE PÁGINA</span>
+      <h2>${escapeHtml(chapter.title)}</h2>
+    </div>
     <a class="read-link" data-resume-reading href="#/capitulos/${chapter.number}">Continuar de onde parei <span aria-hidden="true">→</span></a>
   </section>`;
 }
