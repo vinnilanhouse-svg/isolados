@@ -37,10 +37,28 @@ export function chapterReading(chapters, number) {
   const text = typeof chapter.text === 'string'
     ? `<div class="chapter-text">${escapeHtml(chapter.text)}</div>`
     : '<span class="placeholder">Texto a inserir</span><p class="empty-text">O texto deste capítulo ainda não está disponível no site.</p>';
-  return `<article class="reading chapter-reading">
+  return `<article class="reading chapter-reading" data-chapter="${chapter.number}">
     <span class="eyebrow">CAPÍTULO ${String(chapter.number).padStart(2, '0')}</span>
     <h2>${escapeHtml(chapter.title)}</h2>
     ${chapterArtwork(chapter.cover, 'chapter-reading-artwork', 'eager')}
+    <details class="reading-settings">
+      <summary>Ajustar leitura</summary>
+      <div class="reading-settings-body">
+        <fieldset class="reading-font"><legend>Tamanho do texto</legend>
+          <button type="button" data-font-decrease aria-label="Diminuir tamanho do texto">A−</button>
+          <output aria-live="polite" aria-label="Tamanho atual do texto">18 px</output>
+          <button type="button" data-font-increase aria-label="Aumentar tamanho do texto">A+</button>
+        </fieldset>
+        <label class="reading-spacing">Espaçamento entre linhas
+          <select aria-label="Espaçamento entre linhas">
+            <option value="1.6">Compacto</option>
+            <option value="1.9" selected>Confortável</option>
+            <option value="2.2">Amplo</option>
+          </select>
+        </label>
+        <button class="reading-reset" type="button" data-reading-reset>Restaurar padrão</button>
+      </div>
+    </details>
     ${text}
     <nav class="chapter-nav" aria-label="Navegação de capítulos">
       ${previous ? `<a rel="prev" href="#/capitulos/${previous.number}">← Capítulo anterior</a>` : ''}

@@ -34,6 +34,12 @@ As nove capas de capítulo estão em `public/images/chapters/`, em WebP com a co
 
 O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Água (totalmente escuro), Terra (tom intermediário) e Ar (claro, papel marfim). A escolha fica salva no navegador. Preferências de modo claro/escuro da versão anterior são preservadas.
 
+## Leitura e marcador
+
+O site salva o último capítulo e a passagem visível no navegador, sem conta. O cartão “Continuar de onde parei” aparece na página inicial e no índice depois de abrir um capítulo. Ele retoma a passagem salva; recarregar o capítulo também restaura a leitura. O marcador usa uma posição no texto, para acompanhar mudanças de fonte e largura de tela.
+
+“Ajustar leitura”, dentro dos capítulos, permite escolher o tamanho de 16 a 28 px e três espaçamentos de linha, com opção de restaurar o padrão. As preferências ficam salvas no mesmo navegador. O texto original não é modificado. O controle permanece acessível durante a rolagem e funciona nos quatro temas. Se o armazenamento estiver indisponível, os controles continuam funcionando durante a visita.
+
 ## Fichas dos personagens
 
 Os nove nomes civis, codinomes e caminhos dos retratos ficam em `src/characters.js`. Cada protagonista tem uma imagem própria em `public/images/characters/`, gerada individualmente a pedido do autor. A composição em `public/images/personagens-isolados.png` permanece como referência visual. O codinome aparece em destaque e o nome civil logo abaixo. As biografias ainda aguardam textos do autor.
