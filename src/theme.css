@@ -85,3 +85,19 @@ body.appearance-open{overflow:hidden}
 .appearance-done{width:100%;padding:14px 20px;border:1px solid var(--action);min-height:46px;font:16px Georgia,serif;cursor:pointer}
 @media(max-width:760px){:is([data-theme='water'],[data-theme='stone']) .layout::before{background:radial-gradient(circle at 7px 23px,#0006 0 4px,#a58ab044 5px,var(--surface) 6px,transparent 7px);background-size:19px 39px}}
 @media(max-width:420px){.appearance-panel{padding:20px;width:calc(100% - 24px)}.appearance-options{gap:12px}.theme-option-card{padding:18px 8px 14px;min-height:134px}}
+
+/* A decoração do rodapé acompanha o elemento escolhido, atrás do conteúdo. */
+:root{--footer-element-art:url('/images/elements/air.svg');--footer-element-glow:#bca7dc12;--footer-element-rule:#bca7dc55}
+:root[data-theme='fire']{--footer-element-art:url('/images/elements/fire.svg');--footer-element-glow:#d5843f1a;--footer-element-rule:#bd74454d}
+:root[data-theme='water']{--footer-element-art:url('/images/elements/water.svg');--footer-element-glow:#56a9d41c;--footer-element-rule:#7797d355}
+:root[data-theme='stone']{--footer-element-art:url('/images/elements/earth.svg');--footer-element-glow:#d4ac7d12;--footer-element-rule:#c4ad865c}
+footer{isolation:isolate;border-top-color:var(--footer-element-rule)}
+footer::before{content:'';position:absolute;inset:0;width:100%;pointer-events:none;z-index:-1;transform:none;opacity:1;background-image:var(--footer-element-art),radial-gradient(ellipse at 8% 100%,var(--footer-element-glow),transparent 65%);background-size:100% 100%,100% 100%;background-position:0 0,0 0;background-repeat:no-repeat}
+@media(prefers-reduced-motion:no-preference){
+  [data-theme='fire'] footer::before{animation:footer-embers 7s ease-in-out infinite alternate}
+  [data-theme='water'] footer::before{animation:footer-water 18s ease-in-out infinite alternate}
+  [data-theme='cloud'] footer::before{animation:footer-air 22s ease-in-out infinite alternate}
+}
+@keyframes footer-embers{from{opacity:.6}to{opacity:1}}
+@keyframes footer-water{from{background-position:0 0,0 0}to{background-position:-18px 3px,0 0}}
+@keyframes footer-air{from{background-position:0 0,0 0}to{background-position:16px -2px,0 0}}

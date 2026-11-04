@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240" preserveAspectRatio="none" fill="none">
+  <defs><linearGradient id="heat" x2="0" y2="1"><stop stop-color="#bd5e30" stop-opacity=".08"/><stop offset="1" stop-color="#d77830" stop-opacity=".32"/></linearGradient></defs>
+  <path d="M0 240V181c26 13 42-13 28-39 41 15 9 51 44 57-7-37 53-60 25-99 70 34 15 91 59 105-4-24 25-42 22-68 36 24 7 64 44 68 18 3 22-23 32-37 9 29 3 51 30 72" fill="url(#heat)"/>
+  <g stroke="#c46c32" stroke-opacity=".3" stroke-width="1.2" stroke-linecap="round">
+    <path d="M42 240c-16-26 23-37 14-65M95 240c-29-30 32-55 15-98M159 240c-17-19 18-33 16-51M1320 240c-21-30 24-48 10-79M1380 240c-31-43 32-60 12-100"/>
+    <path d="M1150 240c65-24 107-7 139-24 42-21 30-70 68-92-10 41 27 54 27 85 24-11 26-30 21-48 18 17 11 43 35 53"/>
+  </g>
+  <g fill="#bb5e2c" fill-opacity=".42"><ellipse cx="76" cy="97" rx="1.5" ry="3"/><ellipse cx="142" cy="155" rx="1.2" ry="2.2"/><ellipse cx="213" cy="108" rx="1.4" ry="2.8"/><ellipse cx="1314" cy="104" rx="1.4" ry="2.8"/><ellipse cx="1403" cy="74" rx="1.2" ry="2.5"/></g>
+  <path d="M0 239h1440" stroke="#c27440" stroke-opacity=".25"/>
+</svg>

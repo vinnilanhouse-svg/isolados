@@ -34,6 +34,8 @@ As nove capas de capítulo estão em `public/images/chapters/`, em WebP com a co
 
 O botão no cabeçalho abre quatro opções: Fogo (totalmente claro), Água (totalmente escuro), Terra (tom intermediário) e Ar (claro, papel marfim). A escolha fica salva no navegador. Preferências de modo claro/escuro da versão anterior são preservadas.
 
+O rodapé acompanha o elemento: brasas no Fogo, ondas na Água, camadas de relevo na Terra e correntes de vento no Ar. Os desenhos vetoriais ficam em `public/images/elements/`, com movimentos discretos somente quando não há preferência por movimento reduzido. A textura de rachaduras foi removida.
+
 ## Leitura e marcador
 
 Na página inicial, o bloco “Comece por aqui” traz a capa do primeiro capítulo, o acesso à leitura e a sinopse, logo acima do marcador. O convite usa papel marfim e o marcador usa um recorte roxo com ícone de fita e botão de retomada, inspirados na proposta visual 5. Ambos se adaptam ao celular e aos quatro temas.
