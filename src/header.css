@@ -44,9 +44,9 @@
   display: grid;
   grid-template-columns: auto auto auto minmax(0, 1fr);
   align-items: center;
-  gap: 26px;
+  gap: 22px;
   width: calc(100% - 96px);
-  max-width: 1280px;
+  max-width: 1380px;
   min-height: 118px;
   margin: 0 auto;
   padding: 9px 0 12px;
@@ -100,7 +100,7 @@
   align-items: center;
   justify-content: flex-end;
   flex-wrap: nowrap;
-  gap: clamp(20px, 2vw, 34px);
+  gap: clamp(14px, 1.5vw, 24px);
   width: auto;
   margin: 0;
   padding: 0;
@@ -127,7 +127,7 @@
 
 .site-header .menu-toggle { display: none; }
 
-@media (min-width: 1161px) and (max-width: 1399px) {
+@media (min-width: 1241px) and (max-width: 1399px) {
   .site-header .header-inner { width: calc(100% - 64px); gap: 20px; }
   .site-header .brand-title { font-size: 96px; }
   .site-header .brand { gap: 12px; }
@@ -137,7 +137,7 @@
   .site-header .main-nav a { font-size: 17px; }
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 1240px) {
   .site-header .header-inner {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 24px;
@@ -173,7 +173,7 @@
   .site-header .main-nav.open {
     display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     justify-content: space-between;
     gap: 12px 22px;
     padding: 15px 0 7px;
@@ -224,7 +224,7 @@
 .site-header .theme-toggle{display:flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;padding:11px;border:1px solid #b99dc04d;background:#ffffff03;color:#e5d5e9;cursor:pointer}
 .site-header .theme-toggle:hover{background:#c398df12;border-color:#b99dc08c}
 .theme-toggle svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-@media(max-width:1160px){.site-header .header-controls{grid-column:3;grid-row:1}}
+@media(max-width:1240px){.site-header .header-controls{grid-column:3;grid-row:1}}
 @media(max-width:650px){.site-header .header-inner{column-gap:12px}.site-header .header-controls{grid-column:2;grid-row:1;gap:6px}.site-header .brand{padding:0;gap:9px}.site-header .brand-title{font-size:clamp(46px,15vw,70px)}.site-header .brand .mark{width:48px;height:56px}}
 
 @media(max-width:370px){.site-header .header-inner{column-gap:10px}.site-header .brand{gap:7px}.site-header .brand-title{font-size:clamp(40px,13vw,48px)}.site-header .brand .mark{width:40px;height:48px}}

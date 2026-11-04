@@ -13,7 +13,8 @@ try {
 export function analyticsPath(hash = location.hash) {
   const route = hash.replace(/^#\/?/, '').split(/[?#]/)[0].replace(/\/$/, '');
   if (!route) return '/';
-  if (/^(capitulos|personagens|universo|bastidores|sobre|privacidade|termos)$/.test(route)) return '/' + route;
+  if (/^(capitulos|personagens|artes|universo|bastidores|sobre|privacidade|termos)$/.test(route)) return '/' + route;
+  if (/^artes\/(capitulos|personagens|fanarts)$/.test(route)) return '/' + route;
   if (/^capitulos\/[1-9]$/.test(route)) return '/' + route;
   if (/^personagens\/(vinicius|miguel|fernanda|amanda|jennyfer|allan|gabriel|henrique|jorge)$/.test(route)) return '/' + route;
   if (route === 'bastidores/processo') return '/' + route;

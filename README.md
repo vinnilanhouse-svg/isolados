@@ -50,6 +50,12 @@ A mensagem do autor aparece automaticamente até ser fechada na primeira visita.
 
 Os nove nomes civis, codinomes e caminhos dos retratos ficam em `src/characters.js`. Cada protagonista tem uma imagem própria em `public/images/characters/`, gerada individualmente a pedido do autor. A composição em `public/images/personagens-isolados.png` permanece como referência visual. O codinome aparece em destaque e o nome civil logo abaixo. As biografias ainda aguardam textos do autor.
 
+## Galeria de artes
+
+A aba **Artes** fica em `/#/artes`, com filtros **Todas**, **Capítulos**, **Personagens** e a subaba **Fanarts**. As nove capas e os nove retratos usam os arquivos já aprovados; nomes e títulos vêm dos conteúdos existentes. Cada imagem pode ser ampliada com clique ou Enter, com navegação pelas setas e fechamento por Escape. As composições são exibidas inteiras, sem recortes.
+
+O conteúdo da galeria fica separado em `src/art-content.js`. As miniaturas em `public/images/art-thumbnails/` tornam a grade mais leve, enquanto a ampliação carrega o arquivo original. Para incluir fanarts, adicione ao array `fanarts` os arquivos e créditos fornecidos pelo autor; há um formato de entrada documentado nesse arquivo. Enquanto o array estiver vazio, a página informa que as artes ainda serão inseridas. Não há exemplos fictícios nem envio automático de arquivos.
+
 ## Comentários e curtidas
 
 Os nove capítulos têm participação ao final da leitura. A configuração pública do Supabase fica em `src/community-config.js`. Somente a URL do projeto e a chave publishable são usadas no navegador. Nunca incluir chave secret, service_role ou senha do banco.

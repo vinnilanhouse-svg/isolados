@@ -71,6 +71,9 @@ test('reenvio confirmado não duplica comentário; falha preserva erro utilizáv
 test('métricas usam só caminhos conhecidos, sem consultas ou textos de visitantes', () => {
   assert.equal(analyticsPath('#/capitulos/3?email=pessoal@example.com'), '/capitulos/3');
   assert.equal(analyticsPath('#/personagens/miguel'), '/personagens/miguel');
+  assert.equal(analyticsPath('#/artes'), '/artes');
+  assert.equal(analyticsPath('#/artes/fanarts'), '/artes/fanarts');
+  assert.equal(analyticsPath('#/artes/fanarts/nome-pessoal'), '/pagina-nao-encontrada');
   assert.equal(analyticsPath('#/comentario/qualquer-texto-pessoal'), '/pagina-nao-encontrada');
   assert.equal(analyticsPath('#/'), '/');
 });

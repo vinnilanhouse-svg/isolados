@@ -1,0 +1,41 @@
+.art-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 38px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.art-tabs a{display:inline-block;min-height:44px;padding:11px 17px;border:1px solid var(--line);font:14px/1.5 'Courier New',monospace;color:var(--purple);background:var(--surface)}
+.art-tabs a[aria-current]{border-color:var(--purple);background:var(--tag);color:var(--tag-ink);box-shadow:inset 0 -2px var(--purple)}
+.art-tabs a:hover{border-color:var(--purple)}
+.art-group{margin:0 0 52px}
+.art-group>h2{font:normal 30px/1.4 Georgia,serif;margin:0 0 26px;padding-left:13px;border-left:3px solid var(--purple)}
+.art-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.art-card{min-width:0;margin:0;padding:10px 10px 18px;background:var(--surface);border:1px solid var(--line);box-shadow:0 3px 7px #0001}
+.art-image-button{display:block;position:relative;width:100%;padding:0;border:0;aspect-ratio:3/2;background:var(--paper);cursor:zoom-in;overflow:hidden;color:var(--ink)}
+.art-image-button>img{display:block;width:100%;height:100%;object-fit:contain}
+.art-card--character .art-image-button{aspect-ratio:4/5}
+.art-enlarge-hint{position:absolute;right:7px;bottom:7px;padding:4px 8px;font:11px/1.6 'Courier New',monospace;background:#201626e8;color:#fff5e9}
+.art-card figcaption{padding:5px 6px 0}
+.art-card h3{font:normal 22px/1.4 Georgia,serif;margin:14px 0 10px;overflow-wrap:anywhere}
+.art-card--character h3{font:normal 32px/1.15 'Isolados Display',Impact,sans-serif;letter-spacing:.5px;margin-bottom:5px}
+.art-card figcaption>p{font:15px/1.6 Georgia,serif;color:var(--muted);margin:0 0 10px}
+.art-card figcaption>a{display:inline-block;min-height:44px;padding:8px 0;color:var(--purple);font:14px/1.8 Georgia,serif;text-decoration:underline;text-underline-offset:4px}
+.art-card button:focus-visible,.art-tabs a:focus-visible,.art-card a:focus-visible{outline:3px solid var(--purple);outline-offset:4px}
+.fanarts-empty{padding:42px 28px;text-align:center;border:1px dashed var(--line);background:var(--surface)}
+.fanarts-empty .book-symbol{margin:0 auto 20px;color:var(--decoration);opacity:.65}
+.fanarts-empty h2{font:normal 32px/1.3 Georgia,serif;margin:0 0 18px}
+.fanarts-empty p{max-width:480px;margin:22px auto 0;font:17px/1.8 Georgia,serif;color:var(--muted)}
+body.art-viewer-open{overflow:hidden}
+.art-viewer{width:min(1200px,calc(100% - 32px));max-height:calc(100dvh - 32px);margin:auto;padding:20px;border:1px solid var(--line);background:var(--surface);color:var(--ink);overflow:auto;box-shadow:0 16px 70px #0006}
+.art-viewer::backdrop{background:#100c16e8}
+.art-viewer-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 0 12px}
+.art-viewer-toolbar form{margin:0}
+.art-viewer-close{width:44px;height:44px;border:1px solid var(--line);background:var(--paper);color:var(--purple);font:30px/1 Georgia,serif;cursor:pointer}
+.art-viewer-frame{position:relative;display:grid;place-items:center;width:100%;height:min(62dvh,800px);background:var(--paper)}
+.art-viewer-image{display:block;width:100%;height:100%;object-fit:contain}
+.art-viewer-status{position:absolute;max-width:85%;margin:0;text-align:center;font:14px/1.7 Georgia,serif;color:var(--muted)}
+.art-viewer-caption h2{font:normal 25px/1.4 Georgia,serif;margin:20px 0 6px}
+.art-viewer-subtitle{font:15px/1.6 Georgia,serif;color:var(--muted);margin:0}
+.art-viewer-subtitle:empty{display:none}
+.art-viewer-nav{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}
+.art-viewer-nav button{min-height:44px;max-width:42%;padding:10px 13px;border:1px solid var(--line);background:var(--paper);color:var(--purple);font:14px/1.5 Georgia,serif;cursor:pointer}
+.art-viewer-nav button:disabled{opacity:.4;cursor:default}
+.art-viewer-nav>span{font:12px/1.6 'Courier New',monospace;color:var(--muted);text-align:center}
+.art-viewer :focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+@media(max-width:1000px){.art-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}}
+@media(max-width:600px){.art-grid{grid-template-columns:minmax(0,1fr);gap:25px}.art-tabs{gap:9px;margin-bottom:30px}.art-tabs a{padding:11px 13px}.art-group>h2{font-size:27px}.fanarts-empty{padding:30px 20px}.art-viewer{width:calc(100% - 20px);max-height:calc(100dvh - 20px);padding:13px}.art-viewer-frame{height:54dvh}.art-viewer-caption h2{font-size:22px}.art-viewer-nav{gap:8px}.art-viewer-nav button{font-size:12px;padding:10px 8px}.art-viewer-nav>span{font-size:11px}}
